@@ -66,8 +66,8 @@ nav {
     font-size: 3.5rem;
 }
 
-.red {
-    color: #f00;
+.theme-color {
+    color: rgb(11, 116, 46);
     font-size: 1em;
 }
 
