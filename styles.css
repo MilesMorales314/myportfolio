@@ -64,7 +64,6 @@ nav {
     /* font-family: 'Ewert', cursive; */
     font-family: 'Proza Libre', sans-serif;
     font-size: 3.5rem;
-    display: flex;
 }
 
 .red {
@@ -119,12 +118,13 @@ nav li:hover::after {
     }
 
     nav ul[dropdown="false"] {
+        /* display: none; */
         grid-template-columns: auto;
         transform: translateY(-100%);
 
         color: black;
 
-        transition: all 500ms;
+        transition: transform 500ms;
     }
 
     nav ul[dropdown="true"] {
@@ -133,7 +133,7 @@ nav li:hover::after {
         color: #fff;
 
         transform: translateY(0%);
-        transition: all 500ms;
+        transition: transform 500ms;
 
         margin-bottom: 2rem;
     }
