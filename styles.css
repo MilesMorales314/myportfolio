@@ -67,7 +67,8 @@ nav {
 }
 
 .theme-color {
-    color: rgb(11, 116, 46);
+    --theme-color: rgb(11, 116, 46);
+    color: var(--theme-color);
     font-size: 1em;
 }
 
