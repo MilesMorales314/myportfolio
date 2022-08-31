@@ -11,6 +11,11 @@
     font-size: 62.5%;
 }
 
+:root {
+    --nav-height: 7rem;
+    --max-scrn-width: 600px;
+}
+
 body,
 html {
     height: 100vh;
@@ -35,10 +40,11 @@ html {
     --nav-font-size: 4rem;
     display: grid;
     place-items: center;
-    height: 7rem;
+    height: var(--nav-height);
     width: 100%;
 
     background-color: rgba(0, 0, 0, 0.75);
+    /* background-color: #f00; */
     backdrop-filter: blur(5rem);
     transition: all 500ms;
 
@@ -164,9 +170,10 @@ nav li:hover::after {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-
+    
     display: grid;
     place-items: center;
+    font-size: 3rem;
 }
 
 .home {
@@ -203,10 +210,10 @@ nav li:hover::after {
 
     height: 5rem;
     width: 25rem;
-    
+
     display: grid;
     place-items: center;
-    
+
     background-color: hsla(0, 0%, 100%, 0.05);
     backdrop-filter: blur(2rem);
 
@@ -251,17 +258,55 @@ nav li:hover::after {
 }
 
 @keyframes blink {
-    0% {opacity: 100%;}
-    50% {opacity: 0%;}
-    100% {opacity: 100%;}
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }
 
 .about-me {
     background-color: #fff;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-rows: auto 1fr;
+    place-items: center;
+
 }
 
+.inside-stuff {
+    width: 40vw
+}
+
+
 .contact {
-    background-color: rosybrown;
+    /* background-color: rosybrown; */
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+}
+
+.headings {
+    --heading-padding: 2rem;
+    padding: var(--heading-padding);
+
+    padding-top: calc(var(--nav-height) + var(--heading-padding));
+    /* background-color: #f00; */
+
+    grid-column: span 2;
+}
+
+@media (max-width : 600px) {
+    .inside-stuff {
+        width: 100vw;
+    }
+
+    .headings {
+        grid-column: span 1;
+    }
 }
