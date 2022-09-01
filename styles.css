@@ -167,6 +167,8 @@ nav li:hover::after {
 /* body starts */
 
 .data {
+    background-color: beige;
+
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -272,41 +274,58 @@ nav li:hover::after {
 }
 
 .about-me {
-    background-color: #fff;
+    /* background-color: #fff; */
 
     grid-template-columns: repeat(auto-fill, 1fr);
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto repeat(2, 1fr);
     place-items: center;
 
 }
 
 .inside-stuff {
-    width: 40vw
+    width: 40vw;
+
+    text-align: justify;
 }
 
 
 .contact {
     /* background-color: rosybrown; */
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr;
+    /* grid-template-columns: ret; */
+}
+
+.contact > .headings {
+    /* gri */
+    grid-column: span 1;
 }
 
 .headings {
     --heading-padding: 2rem;
     padding: var(--heading-padding);
-
+    
     padding-top: calc(var(--nav-height) + var(--heading-padding));
     /* background-color: #f00; */
-
+    
     grid-column: span 2;
 }
 
 @media (max-width : 600px) {
     .inside-stuff {
-        width: 100vw;
+        width: 90vw;
     }
 
     .headings {
         grid-column: span 1;
     }
+}
+
+.footer {
+    background-color: black;
+    color: #fff;
+    height: var(--nav-height);
+    width: 100vw;
+
+    display: grid;
+    place-items: center;
 }
