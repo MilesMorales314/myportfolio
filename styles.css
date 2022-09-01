@@ -277,14 +277,14 @@ nav li:hover::after {
     /* background-color: #fff; */
 
     grid-template-columns: repeat(auto-fill, 1fr);
-    grid-template-rows: auto repeat(2, 1fr);
+    grid-template-rows: auto repeat(1, 1fr);
     place-items: center;
 
 }
 
 .inside-stuff {
+    /* width: 80%; */
     width: 40vw;
-
     text-align: justify;
 }
 
@@ -298,6 +298,10 @@ nav li:hover::after {
 .contact > .headings {
     /* gri */
     grid-column: span 1;
+}
+
+.contact .inside-stuff {
+    width: 80vw;
 }
 
 .headings {
@@ -317,6 +321,10 @@ nav li:hover::after {
 
     .headings {
         grid-column: span 1;
+    }
+
+    .about-me {
+        grid-template-rows: auto repeat(2, 1fr);
     }
 }
 
